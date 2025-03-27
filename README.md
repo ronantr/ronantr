@@ -35,7 +35,7 @@ technical_background:
     years: "current"
   - company: "DTSinfo"
     position: "Full-Stack Developer"
-    technologies: [ "Laravel", "NestJS", "Docker", "Kubernetes", "SQL", "GIT" ]
+    technologies: [ "Laravel", "Symfony", "NestJS", "Docker", "Kubernetes", "SQL", "GIT" ]
     years: "3"
 
 currently_learning: [ "Advanced DevOps", "Scalability and Performance Optimization" ]
