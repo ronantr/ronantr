@@ -76,3 +76,5 @@ hobbies: [ "Handball", "Cinema", "Climbing", "Learning new languages" ]
  <img src="https://komarev.com/ghpvc/?username=ronantr&style=for-the-badge">
 </a>
 </div>
+
+<br><br>*<small>last update: 6/17/2026, 8:13:32 AM </small>*

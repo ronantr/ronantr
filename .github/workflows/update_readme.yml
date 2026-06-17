@@ -1,0 +1,44 @@
+name: Update README Daily
+
+on:
+  push:
+  workflow_dispatch:
+  schedule:
+    - cron: "22 22 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Update README timestamp
+        run: |
+          python - <<'PY'
+          from datetime import datetime
+          from pathlib import Path
+          import re
+
+          path = Path("README.md")
+          text = path.read_text()
+          stamp = datetime.now().strftime("%-m/%-d/%Y, %-I:%M:%S %p")
+          text = re.sub(
+              r'(<small>last update: ).*?(</small>)',
+              rf'\1{stamp} \2',
+              text,
+              count=1,
+          )
+          path.write_text(text)
+          PY
+
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v9
+        with:
+          author_name: ${{ github.actor }}
+          author_email: ${{ github.actor }}@users.noreply.github.com
+          message: "docs: update README"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
