@@ -12,13 +12,10 @@
 ```yaml
 name: Ronan Trouillard
 located_in: Issy-les-Moulineaux, France
-current_job: Web Developer Freelance
+current_job: Web Developer
 education:
   - "Master en Ingénierie Du Web - ESGI"
   - "Bachelor Ingénierie du Web - ESGI"
-company:
-  name: "Freelance"
-  location: "France"
 
 fields_of_interests:
   - "Web Development"
