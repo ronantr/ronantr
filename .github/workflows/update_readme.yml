@@ -24,7 +24,8 @@ jobs:
 
           path = Path("README.md")
           text = path.read_text()
-          stamp = datetime.now().strftime("%-m/%-d/%Y, %-I:%M:%S %p")
+          now = datetime.now()
+          stamp = f"{now.month}/{now.day}/{now.year}, {now.strftime('%I').lstrip('0') or '0'}:{now.strftime('%M:%S %p')}"
           text = re.sub(
               r'(<small>last update: ).*?(</small>)',
               rf'\1{stamp} \2',
