@@ -12,13 +12,10 @@
 ```yaml
 name: Ronan Trouillard
 located_in: Issy-les-Moulineaux, France
-current_job: Web Developer Freelance
+current_job: Web Developer
 education:
   - "Master en Ingénierie Du Web - ESGI"
   - "Bachelor Ingénierie du Web - ESGI"
-company:
-  name: "Freelance"
-  location: "France"
 
 fields_of_interests:
   - "Web Development"
@@ -76,3 +73,5 @@ hobbies: [ "Handball", "Cinema", "Climbing", "Learning new languages" ]
  <img src="https://komarev.com/ghpvc/?username=ronantr&style=for-the-badge">
 </a>
 </div>
+
+<br><br>*<small>last update: 6/17/2026, 8:18:23 AM </small>*
