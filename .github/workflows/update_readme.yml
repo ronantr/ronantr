@@ -25,10 +25,11 @@ jobs:
           path = Path("README.md")
           text = path.read_text()
           now = datetime.now()
-          stamp = f"{now.month}/{now.day}/{now.year}, {now.strftime('%I').lstrip('0') or '0'}:{now.strftime('%M:%S %p')}"
+          hour = now.hour % 12 or 12
+          stamp = f"{now.month}/{now.day}/{now.year}, {hour}:{now.strftime('%M:%S %p')}"
           text = re.sub(
-              r'(<small>last update: ).*?(</small>)',
-              rf'\1{stamp} \2',
+              r'(<small>last update: ).*?(\s*</small>)',
+              lambda match: f"{match.group(1)}{stamp}{match.group(2)}",
               text,
               count=1,
           )
