@@ -74,4 +74,4 @@ hobbies: [ "Handball", "Cinema", "Climbing", "Learning new languages" ]
 </a>
 </div>
 
-<br><br>*<small>last update: 11/24/2026, 10:25:23 PM </small>*
+<br><br>*<small>last update: 11/25/2026, 10:25:34 PM </small>*
